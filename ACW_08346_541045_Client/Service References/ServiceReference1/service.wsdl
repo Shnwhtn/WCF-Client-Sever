@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_SayHello_InputMessage">
+    <wsdl:part name="parameters" element="tns:SayHello" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SayHello_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SayHelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPubKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPubKey" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPubKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPubKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SortTheseValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortTheseValues" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SortTheseValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortTheseValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DecryptMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptMessage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DecryptMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sha1Hash_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sha1Hash" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sha1Hash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sha1HashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sha256Hash_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sha256Hash" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Sha256Hash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sha256HashResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SignData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SignData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="SayHello">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SayHello" message="tns:IService1_SayHello_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SayHelloResponse" message="tns:IService1_SayHello_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPubKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPubKey" message="tns:IService1_GetPubKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPubKeyResponse" message="tns:IService1_GetPubKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortTheseValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SortTheseValues" message="tns:IService1_SortTheseValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SortTheseValuesResponse" message="tns:IService1_SortTheseValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecryptMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DecryptMessage" message="tns:IService1_DecryptMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DecryptMessageResponse" message="tns:IService1_DecryptMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sha1Hash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Sha1Hash" message="tns:IService1_Sha1Hash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Sha1HashResponse" message="tns:IService1_Sha1Hash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sha256Hash">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Sha256Hash" message="tns:IService1_Sha256Hash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Sha256HashResponse" message="tns:IService1_Sha256Hash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SignData" message="tns:IService1_SignData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SignDataResponse" message="tns:IService1_SignData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SayHello">
+      <soap:operation soapAction="http://tempuri.org/IService1/SayHello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPubKey">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPubKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortTheseValues">
+      <soap:operation soapAction="http://tempuri.org/IService1/SortTheseValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecryptMessage">
+      <soap:operation soapAction="http://tempuri.org/IService1/DecryptMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sha1Hash">
+      <soap:operation soapAction="http://tempuri.org/IService1/Sha1Hash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sha256Hash">
+      <soap:operation soapAction="http://tempuri.org/IService1/Sha256Hash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignData">
+      <soap:operation soapAction="http://tempuri.org/IService1/SignData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ACW_08346_541045_ServiceLibrary/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
